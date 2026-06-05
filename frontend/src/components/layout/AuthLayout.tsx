@@ -1,7 +1,8 @@
+import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const AuthLayout: React.FC<{ title: string; subtitle: string; children: React.ReactNode }> = ({ title, subtitle, children }) => (
+const AuthLayout = ({ title, subtitle, children }: { title: string; subtitle: string; children: ReactNode }) => (
   <div className="relative min-h-screen overflow-hidden bg-slate-950 text-slate-100">
     <div className="pointer-events-none absolute inset-x-0 top-0 h-96 bg-hero-gradient" />
     <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col px-6 py-10 lg:px-12">
