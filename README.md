@@ -1,5 +1,6 @@
 # AI Expense Tracker
 
+
 A modern, production-ready finance dashboard built with React, Vite, Tailwind CSS, Supabase Auth, Express, and PostgreSQL.
 
 ## Project Highlights

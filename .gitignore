@@ -12,6 +12,7 @@ yarn-error.log*
 **/node_modules
 **/dist
 **/build
+
 **/.turbo
 **/.pnp.*
 .vscode
