@@ -39,7 +39,7 @@ function App() {
       <Suspense fallback={<LoadingSkeleton />}> 
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
-            <Route path="/*" element={<LandingPage />}/>
+            <Route path="/" element={<LandingPage />}/>
             <Route path="/login" element={<LoginPage />}/>
             <Route path="/register" element={<RegisterPage />}/>
             <Route path="/forgot-password" element={<ForgotPasswordPage />}/>
