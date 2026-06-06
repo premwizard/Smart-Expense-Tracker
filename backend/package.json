@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.ts",
-    "start": "node --enable-source-maps dist/index.js",
-    "build": "tsc"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "build": "echo \"No build step needed for backend JavaScript.\""
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.33.0",
