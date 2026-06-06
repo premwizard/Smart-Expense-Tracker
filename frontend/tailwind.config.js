@@ -1,12 +1,14 @@
 export default {
-    content: ['./index.html', './src/**/*.{ts,tsx}'],
+    content: ['./index.html', './src/**/*.{js,jsx}'],
     theme: {
         extend: {
             boxShadow: {
                 glow: '0 20px 75px rgba(56, 189, 248, 0.12)',
+                soft: '0 10px 45px rgba(15, 23, 42, 0.14)',
             },
             backgroundImage: {
                 'hero-gradient': 'radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 35%), radial-gradient(circle at bottom, rgba(139, 92, 246, 0.16), transparent 28%)',
+                'panel-gradient': 'linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.72))',
             },
             colors: {
                 surface: {
@@ -16,6 +18,9 @@ export default {
                     700: '#1d2b43',
                     600: '#24354c',
                 },
+            },
+            fontFamily: {
+                sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
             },
         },
     },

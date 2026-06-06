@@ -23,16 +23,17 @@ const AppShell = () => {
         localStorage.removeItem('aet_token');
         window.location.href = '/login';
     };
-    return (<div className="min-h-screen bg-slate-950 text-slate-100">
+    return (<div className="relative min-h-screen overflow-hidden bg-slate-950 text-slate-100">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-96 bg-hero-gradient"/>
       <div className="mx-auto flex min-h-screen max-w-[1600px] gap-6 px-4 py-6 lg:px-10">
-        <aside className="hidden w-80 shrink-0 rounded-[2rem] border border-white/10 bg-slate-900/70 p-6 shadow-glow backdrop-blur-xl lg:block">
+        <aside className="hidden w-80 shrink-0 rounded-[2rem] border border-white/10 bg-slate-900/70 p-6 shadow-glow backdrop-blur-xl lg:block lg:sticky lg:top-6 lg:self-start">
           <div className="mb-8 space-y-3">
             <p className="text-xs uppercase tracking-[0.24em] text-sky-300">AI Expense Tracker</p>
-            <h2 className="text-2xl font-semibold">Control center</h2>
+            <h2 className="text-2xl font-semibold text-white">Control center</h2>
             <p className="text-sm text-slate-400">Premium finance insights for your daily flow.</p>
           </div>
           <nav className="space-y-2">
-            {navItems.map((item) => (<NavLink key={item.to} to={item.to} className={({ isActive }) => `block rounded-3xl px-4 py-3 text-sm font-medium transition ${isActive ? 'bg-slate-800 text-white shadow-glow' : 'text-slate-300 hover:bg-white/5'}`}>
+            {navItems.map((item) => (<NavLink key={item.to} to={item.to} className={({ isActive }) => `block rounded-3xl px-4 py-3 text-sm font-medium transition ${isActive ? 'bg-slate-800 text-white shadow-glow' : 'text-slate-300 hover:bg-white/5 hover:text-white'}`}>
                 {item.name}
               </NavLink>))}
           </nav>
@@ -42,7 +43,7 @@ const AppShell = () => {
         </aside>
 
         <main className="flex-1 rounded-[2rem] border border-white/10 bg-slate-900/70 p-6 shadow-glow backdrop-blur-xl">
-          <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div className="mb-6 flex flex-col gap-4 rounded-[2rem] border border-white/10 bg-slate-950/80 p-5 shadow-soft md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-sm uppercase tracking-[0.26em] text-sky-300">Dashboard</p>
               <h1 className="text-3xl font-semibold text-white">Welcome back</h1>
@@ -52,7 +53,7 @@ const AppShell = () => {
             </div>
           </div>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.45 }}>
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }}>
             <Routes>
               <Route path="dashboard" element={<DashboardPage />}/>
               <Route path="transactions" element={<TransactionsPage />}/>

@@ -9,10 +9,13 @@ const AuthLayout = ({ title, subtitle, children }) => (<div className="relative 
       <div className="mx-auto w-full max-w-3xl rounded-[2rem] border border-white/10 bg-slate-900/80 p-10 shadow-glow backdrop-blur-xl">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }}>
           <div className="mb-8 space-y-3 text-center">
+            <p className="text-sm uppercase tracking-[0.3em] text-sky-300">Secure access</p>
             <h1 className="text-4xl font-semibold text-white sm:text-5xl">{title}</h1>
             <p className="mx-auto max-w-2xl text-sm text-slate-300 sm:text-base">{subtitle}</p>
           </div>
-          {children}
+          <div className="rounded-[2rem] border border-white/10 bg-slate-950/90 p-8 shadow-soft">
+            {children}
+          </div>
         </motion.div>
       </div>
     </div>
