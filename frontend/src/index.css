@@ -47,7 +47,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Base custom utilities for cards */
-.glass-card {
-  @apply bg-white/80 backdrop-blur-md border border-surface-200 shadow-soft rounded-2xl;
+@layer components {
+  /* Base custom utilities for cards */
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-surface-200 shadow-soft rounded-2xl;
+  }
 }
