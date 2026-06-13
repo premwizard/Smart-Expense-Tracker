@@ -35,7 +35,7 @@ function App() {
             listener?.subscription.unsubscribe();
         };
     }, []);
-    return (<div className="min-h-screen bg-slate-950 text-slate-100">
+    return (<div className="min-h-screen w-full bg-surface-50 text-surface-900">
       <Suspense fallback={<LoadingSkeleton />}> 
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>

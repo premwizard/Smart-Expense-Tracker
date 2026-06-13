@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background-color: #050b16;
-  color: #f8fafc;
+  background-color: #f8fafc;
+  color: #0f172a;
 }
 
 html, body, #root {
@@ -16,14 +16,8 @@ html, body, #root {
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #050b16;
-  background-image:
-    radial-gradient(circle at 15% 10%, rgba(56, 189, 248, 0.14), transparent 18%),
-    radial-gradient(circle at 80% 10%, rgba(139, 92, 246, 0.12), transparent 22%),
-    radial-gradient(circle at 20% 85%, rgba(236, 72, 153, 0.08), transparent 18%),
-    radial-gradient(circle at 85% 80%, rgba(14, 165, 233, 0.08), transparent 18%);
-  background-attachment: fixed;
-  color: #f8fafc;
+  background-color: #f8fafc;
+  color: #0f172a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -44,24 +38,16 @@ a {
   transition: color 200ms ease, transform 200ms ease;
 }
 
-a:hover {
-  transform: translateY(-1px);
-}
-
 ::selection {
-  background: rgba(56, 189, 248, 0.35);
-  color: #ffffff;
+  background: rgba(99, 102, 241, 0.2);
+  color: #312e81;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(circle at bottom left, rgba(56, 189, 248, 0.05), transparent 24%), radial-gradient(circle at top right, rgba(168, 85, 247, 0.05), transparent 18%);
-  pointer-events: none;
-  z-index: -1;
+/* Base custom utilities for cards */
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-surface-200 shadow-soft rounded-2xl;
 }

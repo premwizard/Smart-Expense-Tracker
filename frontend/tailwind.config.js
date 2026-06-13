@@ -3,25 +3,45 @@ export default {
     theme: {
         extend: {
             boxShadow: {
-                glow: '0 20px 75px rgba(56, 189, 248, 0.12)',
-                soft: '0 10px 45px rgba(15, 23, 42, 0.14)',
-            },
-            backgroundImage: {
-                'hero-gradient': 'radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 35%), radial-gradient(circle at bottom, rgba(139, 92, 246, 0.16), transparent 28%)',
-                'panel-gradient': 'linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.72))',
+                soft: '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                card: '0 10px 40px -10px rgba(0,0,0,0.08)',
+                floating: '0 25px 50px -12px rgba(0, 0, 0, 0.15)',
             },
             colors: {
+                primary: {
+                    50: '#eef2ff',
+                    100: '#e0e7ff',
+                    200: '#c7d2fe',
+                    300: '#a5b4fc',
+                    400: '#818cf8',
+                    500: '#6366f1',
+                    600: '#4f46e5',
+                    700: '#4338ca',
+                    800: '#3730a3',
+                    900: '#312e81',
+                    950: '#1e1b4b',
+                },
                 surface: {
-                    950: '#060b16',
-                    900: '#0d1727',
-                    800: '#131e33',
-                    700: '#1d2b43',
-                    600: '#24354c',
+                    50: '#f8fafc',
+                    100: '#f1f5f9',
+                    200: '#e2e8f0',
+                    300: '#cbd5e1',
+                    400: '#94a3b8',
+                    500: '#64748b',
+                    600: '#475569',
+                    700: '#334155',
+                    800: '#1e293b',
+                    900: '#0f172a',
+                    950: '#020617',
                 },
             },
             fontFamily: {
                 sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
             },
+            backgroundImage: {
+                'hero-gradient': 'linear-gradient(135deg, #eef2ff 0%, #ffffff 100%)',
+                'radial-fade': 'radial-gradient(circle at center, rgba(99, 102, 241, 0.08) 0%, transparent 70%)',
+            }
         },
     },
     plugins: [],

@@ -1,6 +1,6 @@
 from fastapi import Depends, HTTPException, Header
 from typing import Optional
-from .schemas import User
+from schemas import User
 
 def get_current_user(authorization: Optional[str] = Header(None)) -> User:
     if not authorization:

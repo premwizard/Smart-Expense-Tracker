@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
 from typing import Optional
 import uuid
-from ..schemas import User, TransactionCreate, TransactionUpdate
-from ..dependencies import get_current_user
-from ..mock_db import mock_storage
+from schemas import User, TransactionCreate, TransactionUpdate
+from dependencies import get_current_user
+from mock_db import mock_storage
 
 router = APIRouter()
 

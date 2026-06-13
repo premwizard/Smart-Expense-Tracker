@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from ..schemas import SignUpRequest, SignInRequest
+from schemas import SignUpRequest, SignInRequest
 
 router = APIRouter()
 

@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
-from ..schemas import User
-from ..dependencies import get_current_user
-from ..mock_db import mock_storage
+from schemas import User
+from dependencies import get_current_user
+from mock_db import mock_storage
 
 router = APIRouter()
 
